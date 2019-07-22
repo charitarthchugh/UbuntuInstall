@@ -1,4 +1,4 @@
-Java Windscribe Play on linux Intellij chrome vivaldi need to be downloaded, 
+#Java Windscribe Play on linux Intellij chrome vivaldi need to be downloaded, 
 sudo add-apt-repository -y ppa:teejee2008/ppa
 sudo add-apt-repository ppa:lutris-team/lutris
 sudo add-apt-repository universe
