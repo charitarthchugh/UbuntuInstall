@@ -7,4 +7,4 @@ Install script- install.sh
 
 
 
-curl -sSL https://github.com/charitarthchugh/UbuntuInstall/blob/master/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/charitarthchugh/UbuntuInstall/master/install.sh | bash
