@@ -1,5 +1,9 @@
 sudo apt update -y
 sudo apt upgrade -y
+sudo apt install figlet -y
+figlet -c "2CC Ubuntu Install Script Start"
+figlet -c "2CC Ubuntu Install Script"
+sudo apt remove figlet
 sudo add-apt-repository -y ppa:teejee2008/ppa
 sudo add-apt-repository ppa:lutris-team/lutris
 sudo add-apt-repository universe
@@ -24,6 +28,8 @@ sudo snap install code --classic
 sudo snap install gimp vlc termius-app chromium
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+figlet -c "2CC Ubuntu Install Script End"
+sudo apt remove figlet
 sudo apt update -y
 sudo apt upgrade -y
 sudo apt autoremove -y
