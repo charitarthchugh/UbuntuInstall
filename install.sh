@@ -22,7 +22,7 @@ sudo apt install gnome-shell-extensions chrome-gnome-shell linuxbrew-wrapper exf
 echo "export Path=/usr/local/bin:$PATH" >> ~/.bash_profile && source  ~/.bash_profile
 git -C "(brew --repo homebrew/core)" fetch --unshallow
 brew install hello gcc python python@2 youtube-dl git ffsend adoptopenjdk openjdk@12 howdoi scrcpy npm maven oracle-jdk-javadoc
-sudo apt install timeshift lutris python2 python3 steam playonlinux thunar gnome-tweak-tool adapta gdebi virtualbox geary gnome-themes-standard gtk2-engines-murrine libglib2.0-dev libxml2-utils materia-gtk-theme flatpak gnome-software-plugin-flatpak gnome-themes-extra tilix typecatcher adb flameshot hello fonts-powerline vim nano zsh -y
+sudo apt install timeshift lutris python2 python3 steam playonlinux thunar gnome-tweak-tool adapta gdebi virtualbox geary gnome-themes-standard gtk2-engines-murrine libglib2.0-dev libxml2-utils materia-gtk-theme flatpak gnome-software-plugin-flatpak gnome-themes-extra tilix typecatcher flameshot hello fonts-powerline vim nano zsh -y
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 wget https://downloads.vivaldi.com/stable/vivaldi-stable_2.9.1705.41-1_amd64.deb
 sudo dpkg -i vivaldi-stable_2.9.1705.41-1_amd64.deb
