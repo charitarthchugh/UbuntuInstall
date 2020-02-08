@@ -7,9 +7,18 @@ sudo add-apt-repository -y ppa:teejee2008/ppa
 sudo add-apt-repository ppa:lutris-team/lutris -y
 sudo add-apt-repository universe -y
 sudo add-apt-repository ppa:tista/adapta -y
-sudo add-apt-repository ppa:alexlarsson/flatpak-y
+sudo add-apt-repository ppa:alexlarsson/flatpak -y
+sudo add-apt-repository ppa:ne0sight/chrome-gnome-shell -y
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key FDC247B7
+sudo dpkg --add-architecture i386 
+wget -nc https://dl.winehq.org/wine-builds/winehq.key
+wget https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_19.04/amd64/libfaudio0_20.01-0~disco_amd64.deb
+sudo dpkg -i *.deb
+sudo apt-key add winehq.key
 echo 'deb https://repo.windscribe.com/ubuntu bionic main'
+sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ eoan main'
+sudo apt update -y
+sudo apt install --install-recommends winehq-stable
 sudo apt install gnome-shell-extensions chrome-gnome-shell linuxbrew-wrapper exfat-fuse exfat-utils p7zip-full p7zip-rar -y
 echo "export Path=/usr/local/bin:$PATH" >> ~/.bash_profile && source  ~/.bash_profile
 git -C "(brew --repo homebrew/core)" fetch --unshallow
