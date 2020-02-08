@@ -18,6 +18,7 @@ echo 'deb https://repo.windscribe.com/ubuntu bionic main'
 sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ eoan main'
 sudo apt update -y
 sudo apt install --install-recommends winehq-stable
+sudo apt install python-nautilus gir1.2-nautilus-3.0 gir1.2-ebook-1.2 gir1.2-ebookcontacts-1.2 gir1.2-edataserver-1.2
 sudo apt install gnome-shell-extensions chrome-gnome-shell linuxbrew-wrapper exfat-fuse exfat-utils p7zip-full p7zip-rar -y
 echo "export Path=/usr/local/bin:$PATH" >> ~/.bash_profile && source  ~/.bash_profile
 git -C "(brew --repo homebrew/core)" fetch --unshallow
@@ -35,6 +36,9 @@ sudo snap install code --classic
 sudo snap install gimp vlc termius-app chromium darktable mockuuups 
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+wget -O gnome-shell-extension-installer "https://github.com/brunelli/gnome-shell-extension-installer/raw/master/gnome-shell-extension-installer"
+chmod +x gnome-shell-extension-installer
+mv gnome-shell-extension-installer /usr/bin/
 figlet -c "2CC Ubuntu Install Script End"
 sudo apt remove figlet
 sudo apt update -y
