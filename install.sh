@@ -8,7 +8,6 @@ sudo add-apt-repository ppa:lutris-team/lutris -y
 sudo add-apt-repository universe -y
 sudo add-apt-repository ppa:tista/adapta -y
 sudo add-apt-repository ppa:alexlarsson/flatpak -y
-sudo add-apt-repository ppa:ne0sight/chrome-gnome-shell -y
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key FDC247B7
 sudo dpkg --add-architecture i386 
 wget -nc https://dl.winehq.org/wine-builds/winehq.key
@@ -41,4 +40,4 @@ sudo apt remove figlet
 sudo apt update -y
 sudo apt upgrade -y
 sudo apt autoremove -y
-chrome https://extensions.gnome.org/extension/1319/gsconnect/
+firefox https://extensions.gnome.org/extension/1319/gsconnect/
