@@ -41,7 +41,7 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 wget -O gnome-shell-extension-installer "https://github.com/brunelli/gnome-shell-extension-installer/raw/master/gnome-shell-extension-installer"
 chmod +x gnome-shell-extension-installer
 mv gnome-shell-extension-installer /usr/bin/
-apm install terminal-plus java-plus ide-java java-importer one-snazzy-syntax atom-material-ui snazzy-syntax java-generator atom-maven
+apm install terminal-plus java-plus ide-java java-import-wiz one-snazzy-syntax atom-material-ui snazzy-syntax java-generator atom-maven deepcode formatter-clangformat
 figlet -c "2CC Ubuntu Install Script End"
 sudo apt remove figlet
 sudo apt update -y
