@@ -7,4 +7,4 @@ Install script- install.sh
 
 
 
-wget https://raw.githubusercontent.com/charitarthchugh/UbuntuInstall/master/install.sh && chmod +x install.sh && .\install.sh
+`wget https://raw.githubusercontent.com/charitarthchugh/UbuntuInstall/master/install.sh && chmod +x install.sh && .\install.sh`
