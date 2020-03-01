@@ -36,6 +36,7 @@ sudo snap install kotlin --classic
 sudo snap install code --classic
 sudo snap install atom --classic
 sudo snap install gimp vlc termius-app chromium darktable 
+sudo npm install --global pure-prompt 
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 apm install terminal-plus java-plus ide-java java-import-wiz one-snazzy-syntax atom-material-ui snazzy-syntax java-generator atom-maven deepcode formatter-clangformat
