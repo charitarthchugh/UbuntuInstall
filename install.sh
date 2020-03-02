@@ -25,12 +25,12 @@ git -C "(brew --repo homebrew/core)" fetch --unshallow
 brew install hello gcc python python@2 youtube-dl git ffsend adoptopenjdk openjdk@12 howdoi scrcpy maven oracle-jdk-javadoc fish
 #main package install
 sudo apt install timeshift lutris python2 python3 steam playonlinux thunar gnome-tweak-tool adapta gdebi npm autojump virtualbox geary gnome-themes-standard gtk2-engines-murrine libglib2.0-dev libxml2-utils materia-gtk-theme flatpak gnome-software-plugin-flatpak gnome-themes-extra tilix typecatcher flameshot fonts-powerline vim nano zsh zsh-syntax-highlighting -y
-#Install Browsers
+#Install Browsers + oracle jdk
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 wget https://downloads.vivaldi.com/stable/vivaldi-stable_2.9.1705.41-1_amd64.deb
 wget https://download.oracle.com/otn-pub/java/jdk/13.0.1+9/cec27d702aa74d5a8630c65ae61e4305/jdk-13.0.1_linux-x64_bin.deb
 sudo dpkg -i *.deb
-
+# install snaps- for dev 
 sudo snap install intellij-idea-ultimate --classic
 sudo snap install kotlin --classic
 sudo snap install code --classic
@@ -47,6 +47,11 @@ wget -qO $HOME"/.config/tilix/schemes/atom.json" https://git.io/v7Q27
 wget -qO $HOME"/.config/tilix/schemes/flatty.json" https://git.io/vFkVc
 wget -qO $HOME"/.config/tilix/schemes/monokai.json" https://git.io/v7Qad
 wget -qO $HOME"/.config/tilix/schemes/one-dark.json" https://git.io/v7Qaw
+cd ..
+# Zsh section
+https://raw.githubusercontent.com/charitarthchugh/UbuntuInstall/master/.zshrc
+mkdir -p /.zsh/
+wget https://raw.githubusercontent.com/charitarthchugh/UbuntuInstall/master/aliasrc
 figlet -c "2CC Ubuntu Install Script End"
 sudo apt update -y
 sudo apt upgrade -y
