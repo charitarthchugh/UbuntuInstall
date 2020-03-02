@@ -1,6 +1,9 @@
 sudo apt update -y
 sudo apt upgrade -y
 sudo apt install figlet -y
+#Create directories
+mkdir -p "$HOME/.zsh"
+mkdir -p ~/.config/tilix/schemes
 figlet -c "2CC Ubuntu Install Script Start"
 figlet -c "2CC Ubuntu Install Script"
 sudo add-apt-repository -y ppa:teejee2008/ppa
@@ -9,20 +12,13 @@ sudo add-apt-repository universe -y
 sudo add-apt-repository ppa:tista/adapta -y
 sudo apt-add-repository ppa:noobslab/deepin-sc -y
 sudo add-apt-repository ppa:alexlarsson/flatpak -y
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key FDC247B7
-sudo dpkg --add-architecture i386 
-wget https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_19.04/amd64/libfaudio0_20.01-0~disco_amd64.deb
-
-echo 'deb https://repo.windscribe.com/ubuntu bionic main'
-sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ eoan main'
-sudo apt update -y && sudo apt upgrade -y
-sudo apt install --install-recommends winehq-stable -y
+sudo dpkg --add-architecture i386 #if it is not enabled already
+wget https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_19.04/amd64/libfaudio0_20.01-0~disco_amd64.deb #dependency for Wine
 sudo apt install python-nautilus gir1.2-nautilus-3.0 gir1.2-ebook-1.2 gir1.2-ebookcontacts-1.2 gir1.2-edataserver-1.2
-
-sudo apt install gnome-shell-extensions chrome-gnome-shell linuxbrew-wrapper exfat-fuse exfat-utils p7zip-full p7zip-rar -y
-echo "export Path=/usr/local/bin:$PATH" >> ~/.bash_profile && source  ~/.bash_profile
+sudo apt install gnome-shell-extensions chrome-gnome-shell linuxbrew-wrapper exfat-fuse exfat-utils p7zip-full p7zip-rar peazip -y
+echo "export Path=/usr/local/bin:$PATH" >> ~/.bash_profile && source  ~/.bash_profile#homebrew post install
 git -C "(brew --repo homebrew/core)" fetch --unshallow
-brew install hello gcc python python@2 youtube-dl git ffsend adoptopenjdk openjdk@12 howdoi scrcpy maven oracle-jdk-javadoc fish
+brew install gcc python python@2 youtube-dl git ffsend adoptopenjdk openjdk@12 howdoi scrcpy maven oracle-jdk-javadoc 
 #main package install
 sudo apt install timeshift lutris python2 python3 steam playonlinux thunar gnome-tweak-tool adapta gdebi npm autojump virtualbox geary gnome-themes-standard gtk2-engines-murrine libglib2.0-dev libxml2-utils materia-gtk-theme flatpak gnome-software-plugin-flatpak gnome-themes-extra tilix typecatcher flameshot fonts-powerline vim nano zsh zsh-syntax-highlighting -y
 #Install Browsers + oracle jdk
@@ -30,18 +26,18 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 wget https://downloads.vivaldi.com/stable/vivaldi-stable_2.9.1705.41-1_amd64.deb
 wget https://download.oracle.com/otn-pub/java/jdk/13.0.1+9/cec27d702aa74d5a8630c65ae61e4305/jdk-13.0.1_linux-x64_bin.deb
 sudo dpkg -i *.deb
+sudo apt install -y default-jdk default-jre#for openjdk/jre through apt
 # install snaps- for dev 
 sudo snap install intellij-idea-ultimate --classic
 sudo snap install kotlin --classic
 sudo snap install code --classic
 sudo snap install atom --classic
 sudo snap install gimp vlc termius-app chromium darktable 
-sudo npm install --global pure-prompt 
-./usr/share/autojump/autojump.sh
+./usr/share/autojump/autojump.sh#autojump init script
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 apm install terminal-plus java-plus ide-java java-import-wiz atom-material-ui snazzy-syntax java-generator atom-maven deepcode formatter-clangformat
-mkdir -p ~/.config/tilix/schemes
+#tilix themes
 cd ~/.config/schemes/
 wget https://github.com/clrxbl/tilix-snazzy/raw/master/snazzy.json
 wget -qO $HOME"/.config/tilix/schemes/atom.json" https://git.io/v7Q27
@@ -51,8 +47,8 @@ wget -qO $HOME"/.config/tilix/schemes/one-dark.json" https://git.io/v7Qaw
 cd ..
 # Zsh section
 https://raw.githubusercontent.com/charitarthchugh/UbuntuInstall/master/.zshrc
-mkdir -p /.zsh/
-wget https://raw.githubusercontent.com/charitarthchugh/UbuntuInstall/master/aliasrc
+git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"#Pure Prompt, npm does not work all the time
+wget https://raw.githubusercontent.com/charitarthchugh/UbuntuInstall/master/aliasrc -O ~/.zsh/aliasrc #get my alaisrc
 figlet -c "2CC Ubuntu Install Script End"
 sudo apt update -y
 sudo apt upgrade -y
