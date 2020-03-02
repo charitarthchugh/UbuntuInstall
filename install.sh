@@ -40,7 +40,7 @@ sudo npm install --global pure-prompt
 ./usr/share/autojump/autojump.sh
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-apm install terminal-plus java-plus ide-java java-import-wiz one-snazzy-syntax atom-material-ui snazzy-syntax java-generator atom-maven deepcode formatter-clangformat
+apm install terminal-plus java-plus ide-java java-import-wiz atom-material-ui snazzy-syntax java-generator atom-maven deepcode formatter-clangformat
 mkdir -p ~/.config/tilix/schemes
 cd ~/.config/schemes/
 wget https://github.com/clrxbl/tilix-snazzy/raw/master/snazzy.json
