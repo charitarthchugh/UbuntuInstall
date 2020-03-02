@@ -1,11 +1,10 @@
 sudo apt update -y
 sudo apt upgrade -y
 sudo apt install figlet -y
+figlet -c "2CC Ubuntu Install Script Start"
 #Create directories
 mkdir -p "$HOME/.zsh"
 mkdir -p ~/.config/tilix/schemes
-figlet -c "2CC Ubuntu Install Script Start"
-figlet -c "2CC Ubuntu Install Script"
 sudo add-apt-repository -y ppa:teejee2008/ppa
 sudo add-apt-repository ppa:lutris-team/lutris -y
 sudo add-apt-repository universe -y
