@@ -41,7 +41,7 @@ tar -zxf /tmp/master.tar.gz -C /tmp/google-fonts/fonts
 sudo find /tmp/goog-fonts/fonts/ -type f -name "*.ttf" -exec cp {} ~/.fonts \;
 git clone https://github.com/potyt/fonts.git ~/.fonts/
 git clone https://github.com/ryanoasis/nerd-fonts.git ~/.fonts/
-
+npm install --save @fortawesome/fontawesome-free
 fc-cache -f -v
 rm -f /tmp/master.tar.gz
 rm -rf /tmp/google-fonts
