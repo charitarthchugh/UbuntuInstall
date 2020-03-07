@@ -65,6 +65,16 @@ cd $HOME
 https://raw.githubusercontent.com/charitarthchugh/UbuntuInstall/master/.zshrc
 git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"#Pure Prompt, npm does not work all the time
 wget https://raw.githubusercontent.com/charitarthchugh/UbuntuInstall/master/aliasrc -O ~/.zsh/aliasrc #get my alaisrc
+#Wine Section
+sudo dpkg --add-architecture i386 
+wget -nc https://dl.winehq.org/wine-builds/winehq.key
+sudo apt-key add winehq.key
+sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main
+sudo apt update -y
+sudo apt install --install-recommends -y winehq-staging
+sudo apt update -y 
+sudo apt install --install-recommends -y winehq-staging
+#Final Steps
 sudo apt update -y
 sudo apt upgrade -y
 figlet -c "2CC Ubuntu Install Script End"
