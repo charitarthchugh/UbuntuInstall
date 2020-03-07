@@ -41,6 +41,10 @@ tar -zxf /tmp/master.tar.gz -C /tmp/google-fonts/fonts
 sudo find /tmp/goog-fonts/fonts/ -type f -name "*.ttf" -exec cp {} ~/.fonts \;
 git clone https://github.com/potyt/fonts.git ~/.fonts/
 git clone https://github.com/ryanoasis/nerd-fonts.git ~/.fonts/
+wget https://github.com/adobe-fonts/source-code-pro/releases/download/variable-fonts/SourceCodeVariable-Italic.otf
+mv *.otf ~/.fonts/
+git clone https://github.com/andreberg/Meslo-Font.git ~/.fonts
+git clone https://github.com/theleagueof/raleway ~/.fonts
 npm install --save @fortawesome/fontawesome-free
 fc-cache -f -v
 rm -f /tmp/master.tar.gz
