@@ -42,7 +42,11 @@ sudo find /tmp/goog-fonts/fonts/ -type f -name "*.ttf" -exec cp {} ~/.fonts \;
 git clone https://github.com/potyt/fonts.git ~/.fonts/
 git clone https://github.com/ryanoasis/nerd-fonts.git ~/.fonts/
 wget https://github.com/adobe-fonts/source-code-pro/releases/download/variable-fonts/SourceCodeVariable-Italic.otf
+wget https://github.com/microsoft/cascadia-code/releases/download/v1911.21/CascadiaMonoPL.ttf
+wget https://github.com/microsoft/cascadia-code/releases/download/v1911.21/CascadiaMono.ttf
+wget https://github.com/microsoft/cascadia-code/releases/download/v1911.21/Cascadia.ttf
 mv *.otf ~/.fonts/
+mv *.ttf ~/.fonts/
 git clone https://github.com/andreberg/Meslo-Font.git ~/.fonts
 git clone https://github.com/theleagueof/raleway ~/.fonts
 npm install --save @fortawesome/fontawesome-free
