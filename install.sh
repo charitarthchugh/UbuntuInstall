@@ -41,7 +41,8 @@ sudo snap install intellij-idea-ultimate --classic
 sudo snap install kotlin --classic
 sudo snap install code --classic
 sudo snap install atom --classic
-sudo snap install gimp vlc termius-app chromium darktable 
+sudo snap install gimp vlc termius-app chromium darktable
+sudo apt install -y gnome-boxes dart
 #Fonts Section
 sudo apt install -y fonts-noto fonts-lato fonts-roboto fonts-materialdesignicons-webfont fonts-hack-otf fonts-powerline typecatcher fonts-firacode font-manager msttcorefonts fonts-indic fonts-wine
 curl -L https://github.com/google/fonts/tarball/master -o /tmp/master.tar.gz
