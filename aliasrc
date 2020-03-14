@@ -24,8 +24,11 @@ ex ()
 }
 
 export EDITOR=vim
-
-alias apt-update='sudo apt update -y'
+alias upd='sudo apt update -y'
+alias upg='sudo apt update -y && sudo apt upgrade -y'
+alias zshrc='${=EDITOR} ~/.zshrc' # Quick access to the ~/.zshrc file
+alias aliasrc='${=EDITOR} ~/.zsh/aliasrc'
+alias up='cd ..'
 
 alias ls='ls --color=auto'
 alias ll='ls -l'
