@@ -29,7 +29,7 @@ echo "export Path=/usr/local/bin:$PATH" >> ~/.bash_profile && source  ~/.bash_pr
 git -C "(brew --repo homebrew/core)" fetch --unshallow
 brew install gcc python python@2 youtube-dl git ffsend adoptopenjdk openjdk@12 howdoi scrcpy maven oracle-jdk-javadoc 
 #main package install
-sudo apt install timeshift lutris python2 python3 playonlinux thunar gnome-tweak-tool adapta gdebi npm autojump glances geary gnome-themes-standard gtk2-engines-murrine libglib2.0-dev libxml2-utils materia-gtk-theme flatpak gnome-software-plugin-flatpak gnome-themes-extra tilix flameshot vim nano zsh zsh-syntax-highlighting -y
+sudo apt install timeshift lutris python2 python3 playonlinux thunar gnome-tweak-tool adapta gdebi npm autojump glances geary gnome-themes-standard gtk2-engines-murrine libglib2.0-dev libxml2-utils materia-gtk-theme flatpak gnome-software-plugin-flatpak gnome-themes-extra tilix flameshot vim nano  -y
 #Install Browsers + oracle jdk
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 wget https://downloads.vivaldi.com/stable/vivaldi-stable_2.9.1705.41-1_amd64.deb
@@ -76,6 +76,7 @@ wget -qO $HOME"/.config/tilix/schemes/monokai.json" https://git.io/v7Qad
 wget -qO $HOME"/.config/tilix/schemes/one-dark.json" https://git.io/v7Qaw
 cd $HOME
 # Zsh section
+sudo apt install zsh zsh-syntax-highlighting antigen -y
 https://raw.githubusercontent.com/charitarthchugh/UbuntuInstall/master/.zshrc
 git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"#Pure Prompt, npm does not work all the time
 wget https://raw.githubusercontent.com/charitarthchugh/UbuntuInstall/master/aliasrc -O ~/.zsh/aliasrc #get my alaisrc
