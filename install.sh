@@ -40,8 +40,7 @@ sudo apt install -y default-jdk default-jre#for openjdk/jre through apt
 sudo snap install intellij-idea-ultimate --classic
 sudo snap install kotlin --classic
 sudo snap install code --classic
-sudo snap install atom --classic
-sudo snap install gimp vlc termius-app chromium darktable
+sudo snap install gimp vlc termius-app chromium darktable chromium-ffmpeg
 sudo apt install -y gnome-boxes dart
 #Fonts Section
 sudo apt install -y fonts-noto fonts-lato fonts-roboto fonts-materialdesignicons-webfont fonts-hack-otf fonts-powerline typecatcher fonts-firacode font-manager msttcorefonts fonts-indic fonts-wine
@@ -55,6 +54,8 @@ wget https://github.com/adobe-fonts/source-code-pro/releases/download/variable-f
 wget https://github.com/microsoft/cascadia-code/releases/download/v1911.21/CascadiaMonoPL.ttf
 wget https://github.com/microsoft/cascadia-code/releases/download/v1911.21/CascadiaMono.ttf
 wget https://github.com/microsoft/cascadia-code/releases/download/v1911.21/Cascadia.ttf
+wget https://github.com/andreberg/Meslo-Font/raw/master/dist/v1.2.1/Meslo%20LG%20DZ%20v1.2.1.zip
+unzip -d ~/.fonts/Meslo/ *.zip
 mv *.otf ~/.fonts/
 mv *.ttf ~/.fonts/
 git clone https://github.com/andreberg/Meslo-Font.git ~/.fonts
@@ -66,14 +67,17 @@ rm -rf /tmp/google-fonts
 ./usr/share/autojump/autojump.sh#autojump init script
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+#Atom
+sudo snap install atom --classic
 apm install terminal-plus java-plus ide-java java-import-wiz atom-material-ui snazzy-syntax java-generator atom-maven deepcode formatter-clangformat
-#tilix themes
+#tilix
+
 cd ~/.config/tilix/schemes/
 wget https://github.com/clrxbl/tilix-snazzy/raw/master/snazzy.json
 wget -qO $HOME"/.config/tilix/schemes/atom.json" https://git.io/v7Q27
 wget -qO $HOME"/.config/tilix/schemes/flatty.json" https://git.io/vFkVc
 wget -qO $HOME"/.config/tilix/schemes/monokai.json" https://git.io/v7Qad
-wget -qO $HOME"/.config/tilix/schemes/one-dark.json" https://git.io/v7Qaw
+wget -qO $HOMEsudo update-alternatives --config x-terminal-emulator"/.config/tilix/schemes/one-dark.json" https://git.io/v7Qaw
 cd $HOME
 # Zsh section
 sudo apt install zsh zsh-syntax-highlighting antigen -y
@@ -89,6 +93,7 @@ sudo apt update -y
 sudo apt install --install-recommends -y winehq-staging
 sudo apt update -y 
 sudo apt install --install-recommends -y winehq-staging
+sudo update-alternatives --config x-terminal-emulator
 #Final Steps
 sudo apt update -y
 sudo apt upgrade -y
