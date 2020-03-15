@@ -62,11 +62,11 @@ fc-cache -f -v
 ./usr/share/autojump/autojump.sh#autojump init script
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-#Atom
+#Atom+ sublime install
+sudo snap install sublime-text --classic
 sudo snap install atom --classic
 apm install terminal-plus java-plus ide-java java-import-wiz atom-material-ui snazzy-syntax java-generator atom-maven deepcode formatter-clangformat
 #tilix
-
 cd ~/.config/tilix/schemes/
 wget https://github.com/clrxbl/tilix-snazzy/raw/master/snazzy.json
 wget -qO $HOME"/.config/tilix/schemes/atom.json" https://git.io/v7Q27
