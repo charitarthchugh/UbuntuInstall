@@ -44,26 +44,21 @@ sudo snap install gimp vlc termius-app chromium darktable chromium-ffmpeg
 sudo apt install -y gnome-boxes dart
 #Fonts Section
 sudo apt install -y fonts-noto fonts-lato fonts-roboto fonts-materialdesignicons-webfont fonts-hack-otf fonts-powerline typecatcher fonts-firacode font-manager msttcorefonts fonts-indic fonts-wine
-curl -L https://github.com/google/fonts/tarball/master -o /tmp/master.tar.gz
-mkdir -p /tmp/google-fonts/fonts
-tar -zxf /tmp/master.tar.gz -C /tmp/google-fonts/fonts
-sudo find /tmp/goog-fonts/fonts/ -type f -name "*.ttf" -exec cp {} ~/.fonts \;
-git clone https://github.com/potyt/fonts.git ~/.fonts/
-git clone https://github.com/ryanoasis/nerd-fonts.git ~/.fonts/
+git clone https://github.com/google/fonts.git ~/.fonts/Google
+git clone https://github.com/potyt/fonts.git ~/.fonts/potyt
+git clone https://github.com/ryanoasis/nerd-fonts.git ~/.fonts/Nerd-Fonts
+git clone https://github.com/JetBrains/JetBrainsMono.git ~/.fonts/Jetbrains
 wget https://github.com/adobe-fonts/source-code-pro/releases/download/variable-fonts/SourceCodeVariable-Italic.otf
 wget https://github.com/microsoft/cascadia-code/releases/download/v1911.21/CascadiaMonoPL.ttf
 wget https://github.com/microsoft/cascadia-code/releases/download/v1911.21/CascadiaMono.ttf
 wget https://github.com/microsoft/cascadia-code/releases/download/v1911.21/Cascadia.ttf
 wget https://github.com/andreberg/Meslo-Font/raw/master/dist/v1.2.1/Meslo%20LG%20DZ%20v1.2.1.zip
 unzip -d ~/.fonts/Meslo/ *.zip
-mv *.otf ~/.fonts/
+ mv *.otf ~/.fonts/
 mv *.ttf ~/.fonts/
-git clone https://github.com/andreberg/Meslo-Font.git ~/.fonts
-git clone https://github.com/theleagueof/raleway ~/.fonts
+git clone https://github.com/theleagueof/raleway ~/.fonts/Raleway
 npm install --save @fortawesome/fontawesome-free
 fc-cache -f -v
-rm -f /tmp/master.tar.gz
-rm -rf /tmp/google-fonts
 ./usr/share/autojump/autojump.sh#autojump init script
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
