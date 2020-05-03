@@ -2,13 +2,13 @@ sudo apt update -y
 sudo apt upgrade -y
 sudo apt install figlet -y
 figlet -c "2CC Ubuntu Install Script Start"
-#Create directories
+# Create directories
 mkdir -p "$HOME/.zsh"
 mkdir -p ~/.config/tilix/schemes
 mkdir ~/.fonts/
-#enable i386
-sudo dpkg --add-architecture i386 
-#add repositories
+# enable i386
+sudo dpkg --add-architecture i386
+# add repositories
 sudo add-apt-repository -y ppa:teejee2008/ppa
 sudo add-apt-repository ppa:lutris-team/lutris -y
 sudo add-apt-repository universe -y
@@ -17,10 +17,10 @@ sudo apt-add-repository ppa:noobslab/deepin-sc -y
 sudo add-apt-repository ppa:alexlarsson/flatpak -y
 sudo dpkg --add-architecture i386 #if it is not enabled already
 wget https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_19.04/amd64/libfaudio0_20.01-0~disco_amd64.deb #dependency for Wine-libfaudio
-sudo apt install python-nautilus gir1.2-nautilus-3.0 gir1.2-ebook-1.2 gir1.2-ebookcontacts-1.2 gir1.2-edataserver-1.2 curl file gcc build-essential -y
-sudo apt install gnome-shell-extensions chrome-gnome-shell exfat-fuse exfat-utils p7zip-full p7zip-rar peazip -y
+sudo apt install python-nautilus gir1.2-nautilus-3.0 gir1.2-ebook-1.2 git hub gir1.2-ebookcontacts-1.2 gir1.2-edataserver-1.2 curl file gcc build-essential -y
+sudo apt install gnome-shell-extensions chrome-gnome-shell exfat-fuse exfat-utils p7zip-full p7zip-rar -y
 #homebrew section
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" 
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
 test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 test -r ~/.bash_profile && echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.bash_profile
@@ -34,18 +34,16 @@ brew install gcc python python@2 youtube-dl git ffsend openjdk@10 openjdk howdoi
 sudo apt install timeshift lutris python2 python3 playonlinux thunar gnome-tweak-tool adapta vlc gimp darktable gdebi npm chromium autojump glances geary gnome-themes-standard gtk2-engines-murrine libglib2.0-dev libxml2-utils materia-gtk-theme flatpak gnome-software-plugin-flatpak gnome-themes-extra tilix flameshot vim nano  -y
 #Install Browsers + oracle jdk
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-wget 
 wget https://downloads.vivaldi.com/stable/vivaldi-stable_2.9.1705.41-1_amd64.deb
 wget https://www.termius.com/download/linux/Termius.deb
 wget https://atom.io/download/deb
 wget "https://download.oracle.com/otn-pub/java/jdk/13.0.2+8/d4173c853231432d94f001e99d882ca7/jdk-13.0.2_linux-x64_bin.deb"
 sudo dpkg -i *.deb
 #IntelliJ download
-wget https://download.jetbrains.com/idea/ideaIU-2019.3.3.tar.gz
-tar -xzf ideaU-2019.3.3.tar.gz
+sudo snap install intellij-idea-ultimate --classic
 sudo apt install -y default-jdk default-jre#for openjdk/jre through apt
 # install snapd-may fail
-sudo apt install -y snapd 
+sudo apt install -y snapd
 sudo apt install -y gnome-boxes dart maven gradle
 #Fonts Section
 sudo apt install -y fonts-noto fonts-lato fonts-roboto fonts-materialdesignicons-webfont fonts-hack-otf fonts-powerline typecatcher fonts-firacode font-manager msttcorefonts fonts-indic fonts-wine
@@ -123,7 +121,7 @@ sudo apt-key add winehq.key
 sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main
 sudo apt update -y
 sudo apt install --install-recommends -y winehq-staging
-sudo apt update -y 
+sudo apt update -y
 sudo apt install --install-recommends -y winehq-staging
 sudo update-alternatives --config x-terminal-emulator
 #Final Steps
@@ -133,7 +131,3 @@ figlet -c "2CC Ubuntu Install Script End"
 sudo apt autoremove -y
 firefox https://extensions.gnome.org/extension/1319/gsconnect/
 chrome https://extensions.gnome.org/extension/1319/gsconnect/
-#Intellij install
-cd ~/ideaIU-2019.3.3/idea-IU-193.6494.35/bin
-./idea.sh
-cd ~
