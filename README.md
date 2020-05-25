@@ -6,4 +6,4 @@ Ubuntu Install script for my necessary apps
 
 
 
-```wget https://raw.githubusercontent.com/charitarthchugh/UbuntuInstall/master/install.sh && chmod +x install.sh && ./install.sh```
+```wget -qO ~/install.sh https://git.io/JfVyp && chmod +x install.sh && ./install.sh```
