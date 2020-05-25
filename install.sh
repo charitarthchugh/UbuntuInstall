@@ -121,7 +121,7 @@ wget https://raw.githubusercontent.com/charitarthchugh/UbuntuInstall/master/alia
 #Wine Section
 wget -nc https://dl.winehq.org/wine-builds/winehq.key
 sudo apt-key add winehq.key
-sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main
+sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
 sudo apt update -y
 sudo apt install --install-recommends -y winehq-staging
 sudo apt update -y
