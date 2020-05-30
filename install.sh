@@ -6,7 +6,8 @@ figlet -c "2CC Ubuntu Install Script Start"
 # Create directories
 mkdir -p "$HOME/.zsh"
 mkdir -p ~/.config/tilix/schemes
-mkdir ~/.fonts/
+mkdir -p ~/.fonts/
+mkdir NerdFonts
 # enable i386
 sudo dpkg --add-architecture i386
 # add repositories
@@ -54,69 +55,26 @@ sudo apt install -y fonts-noto fonts-lato fonts-roboto fonts-materialdesignicons
 git clone https://github.com/google/fonts.git ~/.fonts/Google
 git clone https://github.com/potyt/fonts.git ~/.fonts/potyt
 git clone https://github.com/JetBrains/JetBrainsMono.git ~/.fonts/Jetbrains
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/SpaceMono.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/ShareTechMono.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/UbuntuMono.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Noto.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Mononoki.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Monofur.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Go-Mono.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/ProggyClean.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/VictorMono.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/DejaVuSansMono.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/CodeNewRoman.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/CascadiaCode.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/BitstreamVeraSansMono.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/AnonymousPro.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Arimo.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Agave.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/3270.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/AurulentSansMono.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Cousine.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/DaddyTimeMono.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/DroidSansMono.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FantasqueSansMono.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraMono.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Gohu.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hasklig.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/iA-Writer.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Inconsolata.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/InconsolataGo.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Iosevka.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Lekton.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/MPlus.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/ProFont.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/ProggyClean.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Overpass.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Terminus.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Ubuntu.zip
-`for f in *.zip; do unzip -d "${f%*.zip}" "$f"; done`
-rm *.zip -f
-mv *.otf ~/.fonts/
-mv *.ttf ~/.fonts/
 git clone https://github.com/theleagueof/raleway ~/.fonts/Raleway
 npm install --save @fortawesome/fontawesome-free
-cd ~
 fc-cache -f -v
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-#Atom+ sublime install
+# Atom
 apm install java-plus ide-java java-import-wiz atom-material-ui snazzy-syntax java-generator atom-maven deepcode formatter-clangformat
-#tilix
-cd ~/.config/tilix/schemes/
-wget -q https://github.com/clrxbl/tilix-snazzy/raw/master/snazzy.json
+# Tilix Themes
+wget -qO "~/.config/tilix/schemes/snazzy.json" https://git.io/JfKp7
 wget -qO "~/.config/tilix/schemes/atom.json" https://git.io/v7Q27
 wget -qO "~/.config/tilix/schemes/flatty.json" https://git.io/vFkVc
 wget -qO "~/.config/tilix/schemes/monokai.json" https://git.io/v7Qad
 wget -qO "~/.config/tilix/schemes/one-dark.json" https://git.io/v7Qaw
-cd ~
 # Zsh section
 sudo apt install zsh zsh-syntax-highlighting antigen autojump -y
-https://raw.githubusercontent.com/charitarthchugh/UbuntuInstall/master/.zshrc
+git clone https://github.com/charitarthchugh/dotfiles ~/dotfiles/
+cp -s ~/dotfiles/.zshrc ~
+cp -s ~/dotfiles/.vimrc ~
 git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"#Pure Prompt, npm does not work all the time
-wget https://raw.githubusercontent.com/charitarthchugh/UbuntuInstall/master/aliasrc -O ~/.zsh/aliasrc #get my alaisrc
+#get my alaisrc
 ./usr/share/autojump/autojump.sh#autojump init script
 #Wine Section
 wget -nc https://dl.winehq.org/wine-builds/winehq.key
