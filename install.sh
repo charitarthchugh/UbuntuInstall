@@ -8,6 +8,8 @@ mkdir -p "$HOME/.zsh"
 mkdir -p ~/.config/tilix/schemes
 mkdir -p ~/.fonts/
 mkdir NerdFonts
+alias APTI ="sudo apt install -y"
+alias snapI= "snapI "
 # enable i386
 sudo dpkg --add-architecture i386
 # add repositories
@@ -17,12 +19,12 @@ sudo add-apt-repository universe -y
 sudo add-apt-repository ppa:tista/adapta -y
 sudo apt-add-repository ppa:noobslab/deepin-sc -y
 sudo add-apt-repository ppa:alexlarsson/flatpak -y
- sudo add-apt-repository ppa:bashtop-monitor/bashtop
+sudo add-apt-repository ppa:bashtop-monitor/bashtop
 sudo dpkg --add-architecture i386 #if it is not enabled already
 # install snapd-may fail
-sudo apt install -y snapd
-sudo apt install python-nautilus gir1.2-nautilus-3.0 gir1.2-ebook-1.2 git hub gir1.2-ebookcontacts-1.2 gir1.2-edataserver-1.2 curl file gcc build-essential -y
-sudo apt install gnome-shell-extensions chrome-gnome-shell exfat-fuse exfat-utils p7zip-full p7zip-rar -y
+APTI snapd
+APTI python-nautilus gir1.2-nautilus-3.0 gir1.2-ebook-1.2 git hub gir1.2-ebookcontacts-1.2 gir1.2-edataserver-1.2 curl file gcc build-essential
+APTI gnome-shell-extensions chrome-gnome-shell exfat-fuse exfat-utils p7zip-full p7zip-rar
 #homebrew section
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
@@ -35,9 +37,9 @@ echo "export Path=/usr/local/bin:$PATH" >> ~/.bash_profile && source  ~/.bash_pr
 git -C "(brew --repo homebrew/core)" fetch --unshallow
 brew install gcc python python@2 youtube-dl ffsend howdoi scrcpy maven kotlin
 #main package install
-sudo apt install -y timeshift python2 python3 playonlinux thunar gnome-tweak-tool adapta vlc gimp darktable gdebi npm glances geary
-sudo apt install -y gnome-themes-standard gtk2-engines-murrine libglib2.0-dev libxml2-utils materia-gtk-theme
-sudo apt install -y flatpak gnome-software-plugin-flatpak gnome-themes-extra tilix flameshot vim nano bashtop
+APTI timeshift python2 python3 playonlinux thunar gnome-tweak-tool adapta vlc gimp darktable gdebi npm glances geary
+APTI gnome-themes-standard gtk2-engines-murrine libglib2.0-dev libxml2-utils materia-gtk-theme
+APTI flatpak gnome-software-plugin-flatpak gnome-themes-extra tilix flameshot vim nano bashtop
 #Install Browsers + oracle jdk
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 wget https://downloads.vivaldi.com/stable/vivaldi-stable_2.9.1705.41-1_amd64.deb
@@ -46,16 +48,20 @@ wget https://atom.io/download/deb
 wget "https://download.oracle.com/otn-pub/java/jdk/13.0.2+8/d4173c853231432d94f001e99d882ca7/jdk-13.0.2_linux-x64_bin.deb"
 sudo dpkg -i *.deb
 #IntelliJ download
-sudo snap install intellij-idea-ultimate --classic
+snapI intellij-idea-ultimate --classic
 # Java JDK install
-sudo apt install -y default-jdk default-jre openjdk-14-jdk openjdk-13-jdk openjdk-8-jdk openjdk-8-jre openjdk-11-jdk openjfx
-sudo apt install -y gnome-boxes dart maven gradle
+APTI default-jdk default-jre openjdk-14-jdk openjdk-13-jdk openjdk-8-jdk openjdk-8-jre openjdk-11-jdk openjfx
+APTI dart maven
 #Fonts Section
-sudo apt install -y fonts-noto fonts-lato fonts-roboto fonts-materialdesignicons-webfont fonts-hack-otf fonts-powerline typecatcher fonts-firacode font-manager msttcorefonts fonts-indic fonts-wine
+APTI fonts-noto fonts-lato fonts-roboto fonts-materialdesignicons-webfont fonts-powerline typecatcher font-manager msttcorefonts fonts-indic fonts-wine
 git clone https://github.com/google/fonts.git ~/.fonts/Google
 git clone https://github.com/potyt/fonts.git ~/.fonts/potyt
 git clone https://github.com/JetBrains/JetBrainsMono.git ~/.fonts/Jetbrains
 git clone https://github.com/theleagueof/raleway ~/.fonts/Raleway
+git clone --depth 1 https://github.com/ryanoasis/nerd-fonts ~/NerdFonts
+cd NerdFonts
+./install.sh
+cd ~
 npm install --save @fortawesome/fontawesome-free
 fc-cache -f -v
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
@@ -81,13 +87,8 @@ wget -nc https://dl.winehq.org/wine-builds/winehq.key
 sudo apt-key add winehq.key
 sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
 sudo apt update -y
-sudo apt install --install-recommends -y winehq-staging
-sudo apt update -y
-sudo apt install --install-recommends -y winehq-staging
+APTI --install-recommends winehq-staging
 sudo update-alternatives --config x-terminal-emulator
-#Install GNOME shell extentions
-sudo apt install -y gnome-shell-extension-caffeine gnome-shell-extension-gsconnect gnome-shell-extension-gsconnext-browsers
-sudo apt install -y gnome-shell-extension-no-annoyance gnome-shell-extension-multi-monitors gnome-shell-extension-bluetooth-quick-connect
 # Final Steps
 sudo apt update -y
 sudo apt upgrade -y
