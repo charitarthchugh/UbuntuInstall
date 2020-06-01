@@ -36,6 +36,7 @@ brew install hello
 echo "export Path=/usr/local/bin:$PATH" >> ~/.bash_profile && source  ~/.bash_profile#homebrew post install
 git -C "(brew --repo homebrew/core)" fetch --unshallow
 brew install gcc python python@2 youtube-dl ffsend howdoi scrcpy maven kotlin
+brew install phoronix-test-suite
 #main package install
 APTI timeshift python2 python3 playonlinux thunar gnome-tweak-tool adapta vlc gimp darktable gdebi npm glances geary
 APTI gnome-themes-standard gtk2-engines-murrine libglib2.0-dev libxml2-utils materia-gtk-theme
