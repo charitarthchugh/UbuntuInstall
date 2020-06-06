@@ -36,7 +36,7 @@ echo 'export PATH="/home/2p2107032/.linuxbrew/bin:$PATH"' >> ~/.bash_profile
 brew install hello
 echo "export PATH=/usr/local/bin:$PATH" >> ~/.bash_profile && source  ~/.bash_profile#homebrew post install
 git -C "(brew --repo homebrew/core)" fetch --unshallow
-brew install gcc python python@2 youtube-dl ffsend howdoi scrcpy maven kotlin
+brew install gcc python python@2 youtube-dl scrcpy maven kotlin
 brew install phoronix-test-suite topgrade
 #main package install
 APTI timeshift python2 python3 playonlinux thunar gnome-tweak-tool adapta vlc gimp darktable gdebi npm glances geary lollypop
@@ -68,14 +68,13 @@ apm install java-plus ide-java java-import-wiz atom-material-ui snazzy-syntax ja
 # Tilix Themes
 wget -qO "~/.config/tilix/schemes/snazzy.json" https://git.io/JfKp7
 wget -qO "~/.config/tilix/schemes/atom.json" https://git.io/v7Q27
-wget -qO "~/.config/tilix/schemes/flatty.json" https://git.io/vFkVc
-wget -qO "~/.config/tilix/schemes/monokai.json" https://git.io/v7Qad
 wget -qO "~/.config/tilix/schemes/one-dark.json" https://git.io/v7Qaw
-# Zsh section
+# Dotfiles
 APTI zsh zsh-syntax-highlighting antigen autojump
 git clone https://github.com/charitarthchugh/dotfiles ~/dotfiles/
 cp -s ~/dotfiles/.zshrc ~
 cp -s ~/dotfiles/.vimrc ~
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim# Vundle
 git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"#Pure Prompt, npm does not work all the time
 ./usr/share/autojump/autojump.sh#autojump init script
 #Wine Section
