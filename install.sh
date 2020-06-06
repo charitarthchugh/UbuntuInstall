@@ -36,7 +36,7 @@ echo 'export PATH="/home/2p2107032/.linuxbrew/bin:$PATH"' >> ~/.bash_profile
 brew install hello
 echo "export PATH=/usr/local/bin:$PATH" >> ~/.bash_profile && source  ~/.bash_profile#homebrew post install
 git -C "(brew --repo homebrew/core)" fetch --unshallow
-brew install gcc python python@2 youtube-dl scrcpy maven kotlin
+brew install gcc python python@2 youtube-dl scrcpy kotlin
 brew install phoronix-test-suite topgrade
 #main package install
 APTI timeshift python2 python3 playonlinux thunar gnome-tweak-tool adapta vlc gimp darktable gdebi npm glances geary lollypop
