@@ -69,7 +69,7 @@ apm install java-plus ide-java java-import-wiz atom-material-ui snazzy-syntax ja
 # Tilix Themes
 wget -qO "~/.config/tilix/schemes/snazzy.json" https://git.io/JfKp7
 # Dotfiles
-APTI zsh zsh-syntax-highlighting 
+APTI zsh
 git clone https://github.com/charitarthchugh/dotfiles ~/dotfiles/
 cp -s ~/dotfiles/.zshrc ~
 cp -s ~/dotfiles/.vimrc ~
