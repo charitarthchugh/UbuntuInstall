@@ -49,7 +49,7 @@ sudo dpkg -i *.deb
 sudo apt-get install --fix-missing # fix any 
 #IntelliJ download
 snapI intellij-idea-ultimate --classic
-# Java JDK install+dart and maven
+# Java JDK install and maven
 APTI default-jdk default-jre openjdk-14-jdk openjdk-13-jdk openjdk-8-jdk openjdk-8-jre openjdk-11-jdk openjfx
 APTI: maven
 #Fonts Section
