@@ -60,8 +60,10 @@ git clone https://github.com/JetBrains/JetBrainsMono.git ~/.fonts/Jetbrains
 git clone https://github.com/theleagueof/raleway ~/.fonts/Raleway
 git clone --depth 1 https://github.com/ryanoasis/nerd-fonts ~/.fonts/NerdFonts
 fc-cache -f -v
+#Flatpak Section 
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install -y flathub com.vscodium.codium
 # Atom
 apm install java-plus ide-java java-import-wiz atom-material-ui snazzy-syntax java-generator atom-maven deepcode formatter-clangformat
 # Tilix Themes
