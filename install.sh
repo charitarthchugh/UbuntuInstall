@@ -31,9 +31,11 @@ APTI gnome-shell-extensions chrome-gnome-shell exfat-fuse exfat-utils p7zip-full
 echo 'export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"' >
 echo 'export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"' >> ~/.bashrc
 git -C "(brew --repo homebrew/core)" fetch --unshallow
-brew install gcc python youtube-dl scrcpy
+brew install gcc python youtube-dl scrcpy npm
 brew install phoronix-test-suite topgrade
 brew install getantibody/tap/antibody
+#Handy little program
+npm install -g undollar
 #main package install
 APTI timeshift python2 python3 playonlinux thunar gnome-tweak-tool adapta vlc gimp darktable gdebi npm glances geary lollypop
 APTI gnome-themes-standard gtk2-engines-murrine libglib2.0-dev libxml2-utils materia-gtk-theme
