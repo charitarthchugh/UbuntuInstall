@@ -39,7 +39,7 @@ npm install -g undollar
 #main package install
 APTI timeshift python2 python3 playonlinux thunar gnome-tweak-tool adapta vlc gimp geary lollypop
 APTI gnome-themes-standard gtk2-engines-murrine libglib2.0-dev libxml2-utils materia-gtk-theme
-APTI flatpak gnome-software-plugin-flatpak gnome-themes-extra tilix flameshot vim bashtop atom
+APTI flatpak gnome-software-plugin-flatpak gnome-themes-extra tilix flameshot vim bashtop atom trash-cli
 #Install Browsers + oracle jdk
 wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 wget -q https://downloads.vivaldi.com/stable/vivaldi-stable_2.9.1705.41-1_amd64.deb
