@@ -9,7 +9,7 @@ mkdir -p ~/.config/tilix/schemes
 mkdir -p ~/.fonts/
 mkdir NerdFonts
 alias APTI ="sudo apt install -y"
-alias APTREPO = "sudo add-apt-re pository -y"
+alias APTREPO = "sudo add-apt-repository -y"
 alias snapI= "sudo snap install"
 # enable i386
 sudo dpkg --add-architecture i386
