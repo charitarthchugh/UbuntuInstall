@@ -33,7 +33,7 @@ echo 'export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"' >
 echo 'export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"' >> ~/.bashrc
 git -C "(brew --repo homebrew/core)" fetch --unshallow
 brew install gcc python youtube-dl scrcpy npm
-brew install phoronix-test-suite topgrade autojump
+brew install phoronix-test-suite topgrade 
 brew install getantibody/tap/antibody
 #Handy little program
 npm install -g undollar
