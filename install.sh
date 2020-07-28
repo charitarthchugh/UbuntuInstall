@@ -19,7 +19,6 @@ sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ 
 sudo apt update -y
 APTREPO ppa:teejee2008/ppa
 APTREPO ppa:lutris-team/lutris
-APTREPO universe
 APTREPO ppa:tista/adapta
 APTREPO ppa:noobslab/deepin-sc
 APTREPO ppa:bashtop-monitor/bashtop
