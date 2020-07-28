@@ -53,7 +53,7 @@ snapI intellij-idea-ultimate --classic
 APTI default-jdk default-jre openjdk-14-jdk openjdk-13-jdk openjdk-8-jdk openjdk-8-jre openjdk-11-jdk openjfx
 APTI: maven
 #Fonts Section
-APTI fonts-noto fonts-lato fonts-roboto fonts-materialdesignicons-webfont fonts-powerline typecatcher font-manager msttcorefonts fonts-indic fonts-wine
+APTI fonts-noto fonts-lato fonts-roboto fonts-materialdesignicons-webfont fonts-powerline font-manager msttcorefonts fonts-indic fonts-wine
 git clone https://github.com/google/fonts.git ~/.fonts/Google
 git clone https://github.com/potyt/fonts.git ~/.fonts/potyt
 git clone https://github.com/JetBrains/JetBrainsMono.git ~/.fonts/Jetbrains
