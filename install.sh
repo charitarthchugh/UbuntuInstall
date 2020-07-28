@@ -46,6 +46,7 @@ wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.de
 wget -q https://downloads.vivaldi.com/stable/vivaldi-stable_2.9.1705.41-1_amd64.deb
 wget -q "https://download.oracle.com/otn-pub/java/jdk/13.0.2+8/d4173c853231432d94f001e99d882ca7/jdk-13.0.2_linux-x64_bin.deb"
 sudo dpkg -i *.deb
+sudo apt-get install --fix-missing # fix any 
 #IntelliJ download
 snapI intellij-idea-ultimate --classic
 # Java JDK install+dart and maven
