@@ -26,15 +26,10 @@ sudo dpkg --add-architecture i386 #if it is not enabled already
 APTI snapd
 APTI python-nautilus gir1.2-nautilus-3.0 gir1.2-ebook-1.2 git hub gir1.2-ebookcontacts-1.2 gir1.2-edataserver-1.2 curl file gcc build-essential
 APTI gnome-shell-extensions chrome-gnome-shell exfat-fuse exfat-utils p7zip-full p7zip-rar
-#homebrew section
+#Homebrew section
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
-test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-test -r ~/.bash_profile && echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.bash_profile
-echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
-echo 'export PATH="/home/2p2107032/.linuxbrew/bin:$PATH"' >> ~/.bash_profile
-brew install hello
-echo "export PATH=/usr/local/bin:$PATH" >> ~/.bash_profile && source  ~/.bash_profile#homebrew post install
+echo 'export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"' >
+echo 'export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"' >> ~/.bashrc
 git -C "(brew --repo homebrew/core)" fetch --unshallow
 brew install gcc python python@2 youtube-dl scrcpy kotlin
 brew install phoronix-test-suite topgrade
