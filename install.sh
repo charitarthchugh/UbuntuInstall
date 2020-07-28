@@ -65,8 +65,6 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 apm install java-plus ide-java java-import-wiz atom-material-ui snazzy-syntax java-generator atom-maven deepcode formatter-clangformat
 # Tilix Themes
 wget -qO "~/.config/tilix/schemes/snazzy.json" https://git.io/JfKp7
-wget -qO "~/.config/tilix/schemes/atom.json" https://git.io/v7Q27
-wget -qO "~/.config/tilix/schemes/one-dark.json" https://git.io/v7Qaw
 # Dotfiles
 APTI zsh zsh-syntax-highlighting 
 git clone https://github.com/charitarthchugh/dotfiles ~/dotfiles/
