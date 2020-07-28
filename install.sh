@@ -38,7 +38,7 @@ brew install getantibody/tap/antibody
 #Handy little program
 npm install -g undollar
 #main package install
-APTI timeshift python2 python3 playonlinux thunar gnome-tweak-tool adapta vlc gimp darktable gdebi npm glances geary lollypop
+APTI timeshift python2 python3 playonlinux thunar gnome-tweak-tool adapta vlc gimp darktable geary lollypop
 APTI gnome-themes-standard gtk2-engines-murrine libglib2.0-dev libxml2-utils materia-gtk-theme
 APTI flatpak gnome-software-plugin-flatpak gnome-themes-extra tilix flameshot vim bashtop atom
 #Install Browsers + oracle jdk
