@@ -48,7 +48,7 @@ sudo dpkg -i *.deb
 snapI intellij-idea-ultimate --classic
 # Java JDK install+dart and maven
 APTI default-jdk default-jre openjdk-14-jdk openjdk-13-jdk openjdk-8-jdk openjdk-8-jre openjdk-11-jdk openjfx
-APTI dart maven
+APTI: maven
 #Fonts Section
 APTI fonts-noto fonts-lato fonts-roboto fonts-materialdesignicons-webfont fonts-powerline typecatcher font-manager msttcorefonts fonts-indic fonts-wine
 git clone https://github.com/google/fonts.git ~/.fonts/Google
