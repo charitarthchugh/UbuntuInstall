@@ -14,6 +14,9 @@ alias snapI= "sudo snap install"
 # enable i386
 sudo dpkg --add-architecture i386
 # add repositories
+wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add
+sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
+sudo apt update -y
 APTREPO ppa:teejee2008/ppa
 APTREPO ppa:lutris-team/lutris
 APTREPO universe
@@ -37,11 +40,10 @@ npm install -g undollar
 #main package install
 APTI timeshift python2 python3 playonlinux thunar gnome-tweak-tool adapta vlc gimp darktable gdebi npm glances geary lollypop
 APTI gnome-themes-standard gtk2-engines-murrine libglib2.0-dev libxml2-utils materia-gtk-theme
-APTI flatpak gnome-software-plugin-flatpak gnome-themes-extra tilix flameshot vim bashtop
+APTI flatpak gnome-software-plugin-flatpak gnome-themes-extra tilix flameshot vim bashtop atom
 #Install Browsers + oracle jdk
 wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 wget -q https://downloads.vivaldi.com/stable/vivaldi-stable_2.9.1705.41-1_amd64.deb
-wget -q https://atom.io/download/deb
 wget -q "https://download.oracle.com/otn-pub/java/jdk/13.0.2+8/d4173c853231432d94f001e99d882ca7/jdk-13.0.2_linux-x64_bin.deb"
 sudo dpkg -i *.deb
 #IntelliJ download
