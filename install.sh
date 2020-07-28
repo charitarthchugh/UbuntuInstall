@@ -31,8 +31,8 @@ APTI gnome-shell-extensions chrome-gnome-shell exfat-fuse exfat-utils p7zip-full
 echo 'export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"' >
 echo 'export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"' >> ~/.bashrc
 git -C "(brew --repo homebrew/core)" fetch --unshallow
-brew install gcc python python@2 youtube-dl scrcpy kotlin
 brew install phoronix-test-suite topgrade
+brew install gcc python youtube-dl scrcpy
 #main package install
 APTI timeshift python2 python3 playonlinux thunar gnome-tweak-tool adapta vlc gimp darktable gdebi npm glances geary lollypop
 APTI gnome-themes-standard gtk2-engines-murrine libglib2.0-dev libxml2-utils materia-gtk-theme
@@ -65,7 +65,7 @@ wget -qO "~/.config/tilix/schemes/snazzy.json" https://git.io/JfKp7
 wget -qO "~/.config/tilix/schemes/atom.json" https://git.io/v7Q27
 wget -qO "~/.config/tilix/schemes/one-dark.json" https://git.io/v7Qaw
 # Dotfiles
-APTI zsh zsh-syntax-highlighting antigen autojump
+APTI zsh zsh-syntax-highlighting autojump
 git clone https://github.com/charitarthchugh/dotfiles ~/dotfiles/
 cp -s ~/dotfiles/.zshrc ~
 cp -s ~/dotfiles/.vimrc ~
