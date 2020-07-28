@@ -19,7 +19,6 @@ APTREPO ppa:lutris-team/lutris
 APTREPO universe
 APTREPO ppa:tista/adapta
 APTREPO ppa:noobslab/deepin-sc
-APTREPO ppa:alexlarsson/flatpak
 APTREPO ppa:bashtop-monitor/bashtop
 sudo dpkg --add-architecture i386 #if it is not enabled already
 # install snapd-may fail
