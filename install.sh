@@ -32,7 +32,7 @@ echo 'export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"' >
 echo 'export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"' >> ~/.bashrc
 git -C "(brew --repo homebrew/core)" fetch --unshallow
 brew install gcc python youtube-dl scrcpy npm
-brew install phoronix-test-suite topgrade
+brew install phoronix-test-suite topgrade autojump
 brew install getantibody/tap/antibody
 #Handy little program
 npm install -g undollar
@@ -68,13 +68,12 @@ wget -qO "~/.config/tilix/schemes/snazzy.json" https://git.io/JfKp7
 wget -qO "~/.config/tilix/schemes/atom.json" https://git.io/v7Q27
 wget -qO "~/.config/tilix/schemes/one-dark.json" https://git.io/v7Qaw
 # Dotfiles
-APTI zsh zsh-syntax-highlighting autojump
+APTI zsh zsh-syntax-highlighting 
 git clone https://github.com/charitarthchugh/dotfiles ~/dotfiles/
 cp -s ~/dotfiles/.zshrc ~
 cp -s ~/dotfiles/.vimrc ~
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim# Vundle
 git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"#Pure Prompt, npm does not work all the time
-./usr/share/autojump/autojump.sh#autojump init script
 #Wine Section
 wget -nc https://dl.winehq.org/wine-builds/winehq.key
 sudo apt-key add winehq.key
