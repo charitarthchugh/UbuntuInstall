@@ -69,6 +69,7 @@ mkdir -p ~/.vim/colors
 cd ~/.vim/colors && wget https://raw.githubusercontent.com/connorholyday/vim-snazzy/master/colors/snazzy.vim
 cd ~
 vim +PluginInstall +qall #Hopefuly install vim plugnins
+python ~/.vim/bundle/youcompleteme/install.sh --all
 #Wine Section
 wget -nc https://dl.winehq.org/wine-builds/winehq.key
 sudo apt-key add winehq.key
