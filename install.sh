@@ -12,6 +12,8 @@ mkdir -p ~/.fonts/
 # enable i386
 sudo dpkg --add-architecture i386
 # add repositories
+wget -qO - https://packagecloud.io/shiftkey/desktop/gpgkey | sudo apt-key add -
+sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/shiftkey/desktop/any/ any main" > /etc/apt/sources.list.d/packagecloud-shiftky-desktop.list'
 sudo apt update -y
 sudo add-apt-repository -y ppa:teejee2008/ppa
 sudo add-apt-repository -y ppa:bashtop-monitor/bashtop
