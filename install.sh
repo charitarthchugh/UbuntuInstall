@@ -33,7 +33,7 @@ brew install  topgrade
 #Handy little program
 sudo npm install -g undollar carbon-now-cli
 #main package install
-sudo apt install -y timeshift python2 python3 playonlinux thunar gnome-tweak-tool vlc gimp geary lollypop
+sudo apt install -y timeshift python2 python3 playonlinux thunar gnome-tweak-tool vlc gimp geary lollypop ksysguard
 sudo apt install -y gnome-themes-standard gtk2-engines-murrine libglib2.0-dev libxml2-utils openssh-server
 sudo apt install -y gnome-software-plugin-flatpak gnome-themes-extra  #Does not work at all in pop
 sudo apt install -y flatpak tilix flameshot vim bashtop trash-cli github-desktop python-is-python3 python-nautilus
