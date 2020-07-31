@@ -6,6 +6,7 @@ sudo apt upgrade -y
 # Create directories
 mkdir -p "$HOME/.zsh"
 mkdir -p ~/.config/tilix/schemes/
+mkdir -p ~/.vim/colors
 # Tilix Themes - so I can set up tilix quicker.
 wget https://github.com/clrxbl/tilix-snazzy/raw/master/snazzy.json -O ~/.config/tilix/schemes/snazzy.json
 mkdir -p ~/.fonts/
@@ -29,7 +30,6 @@ test -r ~/.bash_profile && echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>
 echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
 brew install gcc python youtube-dl npm
 brew install  topgrade 
-brew install antibody
 #Handy little program
 npm install -g undollar carbon-now-cli
 #main package install
@@ -60,6 +60,7 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 # Dotfiles
 sudo apt install -y zsh autojump
+curl -sfL git.io/antibody | sudo sh -s - -b /usr/local/bin
 git clone https://github.com/charitarthchugh/dotfiles ~/dotfiles/
 cp -s ~/dotfiles/.zshrc ~
 cp -s ~/dotfiles/.vimrc ~
