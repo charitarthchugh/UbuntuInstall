@@ -20,7 +20,7 @@ sudo add-apt-repository -y ppa:teejee2008/ppa
 sudo add-apt-repository -y ppa:bashtop-monitor/bashtop
 # install snapd-may fail
 sudo apt install -y snapd
-sudo apt install -y python-nautilus python3-pip gir1.2-nautilus-3.0 gir1.2-ebook-1.2 git hub gir1.2-ebookcontacts-1.2 gir1.2-edataserver-1.2 curl file gcc build-essential golang nodejs python3-dev
+sudo apt install -y python-nautilus unzip python3-pip gir1.2-nautilus-3.0 gir1.2-ebook-1.2 git hub gir1.2-ebookcontacts-1.2 gir1.2-edataserver-1.2 curl file gcc build-essential golang nodejs python3-dev
 sudo apt install -y gnome-shell-extensions chrome-gnome-shell exfat-fuse exfat-utils p7zip-full p7zip-rar samba python3-psutil cmake npm 
 #Homebrew section
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -36,7 +36,7 @@ sudo npm install -g undollar carbon-now-cli
 sudo apt install -y timeshift python2 python3 playonlinux thunar gnome-tweak-tool vlc gimp geary lollypop
 sudo apt install -y gnome-themes-standard gtk2-engines-murrine libglib2.0-dev libxml2-utils openssh-server
 sudo apt install -y gnome-software-plugin-flatpak gnome-themes-extra  #Does not work at all in pop
-sudo apt install -y flatpak tilix flameshot vim bashtop  trash-cli github-desktop python-is-python3 python-nautilus
+sudo apt install -y flatpak tilix flameshot vim bashtop trash-cli github-desktop python-is-python3 python-nautilus
 #Install Browsers + oracle jdk
 wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i *.deb
