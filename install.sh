@@ -1,8 +1,8 @@
 #!/bin/bash
+sudo apt install figlet lolcat -y
+figlet -c "2CC Ubuntu Install Script Start" | lolcat
 sudo apt update -y
 sudo apt upgrade -y
-sudo apt install figlet -y
-figlet -c "2CC Ubuntu Install Script Start"
 # Create directories
 mkdir -p "$HOME/.zsh"
 mkdir -p ~/.config/tilix/schemes/
@@ -72,5 +72,5 @@ sudo apt install -y --install-recommends winehq-staging
 # Final Steps
 sudo apt update -y
 sudo apt upgrade -y
-figlet -c "2CC Ubuntu Install Script End"
+figlet -c "2CC Ubuntu Install Script End"| lolcat
 sudo apt autoremove -y
