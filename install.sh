@@ -31,7 +31,7 @@ echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
 brew install gcc python youtube-dl npm
 brew install  topgrade 
 #Handy little program
-npm install -g undollar carbon-now-cli
+sudo npm install -g undollar carbon-now-cli
 #main package install
 sudo apt install -y timeshift python2 python3 playonlinux thunar gnome-tweak-tool vlc gimp geary lollypop
 sudo apt install -y gnome-themes-standard gtk2-engines-murrine libglib2.0-dev libxml2-utils openssh-server
