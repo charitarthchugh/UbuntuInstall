@@ -20,8 +20,8 @@ sudo add-apt-repository -y ppa:teejee2008/ppa
 sudo add-apt-repository -y ppa:bashtop-monitor/bashtop
 # install snapd-may fail
 sudo apt install -y snapd
-sudo apt install -y python-nautilus gir1.2-nautilus-3.0 gir1.2-ebook-1.2 git hub gir1.2-ebookcontacts-1.2 gir1.2-edataserver-1.2 curl file gcc build-essential
-sudo apt install -y gnome-shell-extensions chrome-gnome-shell exfat-fuse exfat-utils p7zip-full p7zip-rar samba
+sudo apt install -y python-nautilus python3-pip gir1.2-nautilus-3.0 gir1.2-ebook-1.2 git hub gir1.2-ebookcontacts-1.2 gir1.2-edataserver-1.2 curl file gcc build-essential golang nodejs python3-dev
+sudo apt install -y gnome-shell-extensions chrome-gnome-shell exfat-fuse exfat-utils p7zip-full p7zip-rar samba python3-psutil cmake npm 
 #Homebrew section
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
