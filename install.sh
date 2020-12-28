@@ -7,10 +7,7 @@ sudo apt upgrade -y
 mkdir -p "$HOME/.zsh"
 mkdir -p ~/.vim/colors
 mkdir -p ~/.fonts/
-
-declare -a install_apt=( "snapd" "alacritty" python-nautilus" "unzip" "python3-pip" "gir1.2-nautilus-3.0" "gir1.2-ebook-1.2" "git" "hub" "gir1.2-ebookcontacts-1.2" "gir1.2-edataserver-1.2" "curl" "file" "gcc" "build-essential" "golang" "nodejs" "python3-dev")
 # enable i386
-sudo dpkg --add-architecture i386
 # add repositories
 wget -qO - https://packagecloud.io/shiftkey/desktop/gpgkey | sudo apt-key add -
 sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/shiftkey/desktop/any/ any main" > /etc/apt/sources.list.d/packagecloud-shiftky-desktop.list'
