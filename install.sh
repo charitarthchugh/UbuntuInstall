@@ -75,9 +75,9 @@ while read formulae; do
 done < brew_formulae.txt 
 
 # Install fonts
-git clone --depth 1 https://github.com/google/fonts.git ~/.fonts/Google
-git clone --depth 1 https://github.com/JetBrains/JetBrainsMono ~/.fonts/Jetbrains
-git clone --depth 1 https://github.com/ryanoasis/nerd-fonts ~/.fonts/NerdFonts
+git clone --depth 1 https://github.com/google/fonts.git $HOME/.fonts/Google
+git clone --depth 1 https://github.com/JetBrains/JetBrainsMono $HOME/.fonts/Jetbrains
+git clone --depth 1 https://github.com/ryanoasis/nerd-fonts $HOME/.fonts/NerdFonts
 fc-cache -r -v
 # Quick Git Config
 git config --global init.defaultBranch main
