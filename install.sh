@@ -17,14 +17,7 @@ fi
 sudo add-apt-repository -y ppa:teejee2008/ppa
 sudo apt update  
 # Programs to install via apt
-while read package; do 
-    sudo apt install -y "$package"
-    if [ $? -eq 0]; then
-        echo "$package is installed from apt!"
-    else
-        echo "$package" >> apt_failed.text
-    fi
-done < apt_packages.txt 
+xargs --arg-file="~/fre.sh/apt_packages.txt" sudo apt install -y
 
 # Snap section- cannot use loop for snaps that need --classic
 sudo snap install --classic intellij-idea-ultimate
