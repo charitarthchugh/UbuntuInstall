@@ -59,7 +59,8 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 # Programs to install via Homebrew(brew)
 brew bundle --file ~/fre.sh/Brewfile --no-lock
-
+# programs to install via npm
+npm i -g carbon-now-cli
 # Install fonts
 git clone --depth 1 https://github.com/google/fonts.git $HOME/.fonts/Google
 git clone --depth 1 https://github.com/JetBrains/JetBrainsMono $HOME/.fonts/Jetbrains
