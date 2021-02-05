@@ -65,14 +65,7 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 # Programs to install via Homebrew(brew)
-while read formulae; do 
-    exec /home/linuxbrew/.linuxbrew/bin/brew install "$formulae"
-    if [ $? -eq 0]; then
-        echo "$formulae is installed from Brew!"
-    else
-        echo "$formulae" >> brew_failed.text
-    fi
-done < brew_formulae.txt 
+brew bundle --file ~/fre.sh/Brewfile --no-lock
 
 # Install fonts
 git clone --depth 1 https://github.com/google/fonts.git $HOME/.fonts/Google
