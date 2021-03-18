@@ -5,16 +5,20 @@ sudo dpkg --add-architecture i386
 sudo apt update -y
 sudo apt upgrade -y
 # Add repositories for apt
-sudo apt install apt-transport-https curl gnupg # required to do before main application install
+sudo apt install apt-transport-https curl gnupg software-properties-common # required to do before main application install
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
+sudo apt-add-repository https://cli.github.com/packages
 
 curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
 
 echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-
+wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 if [ ! -f /etc/apt/sources.list.d/system76-ubuntu-pop-focal.list ];then #make sure that it is not pop-os
     sudo add-apt-repository ppa:mmstick76/alacritty
 fi  
 sudo add-apt-repository -y ppa:teejee2008/ppa
+sudo add-apt-repository -y ppa:git-core/ppa
+sudo add-apt-repository -y ppa:phoerious/keepassxc
 sudo apt update  
 # Programs to install via apt
 xargs --arg-file="~/fre.sh/apt_packages.txt" sudo apt install -y
@@ -40,18 +44,10 @@ gsettings set org.gnome.desktop.interface cursor-theme "WhiteSur-dark"
 cd $HOME
 # Setup dotfiles
 curl -sfL git.io/antibody | sudo sh -s - -b /usr/local/bin
-git clone https://github.com/charitarthchugh/dotfiles $HOME/dotfiles/
-cp -s $HOME/dotfiles/.zshrc $HOME
-cp -s $HOME/dotfiles/.vimrc $HOME
-cp -s $HOME/dotfiles/.bashrc $HOME
-#   Vim Setup
-git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim #Vundle
-mkdir -p $HOME/.vim/colors
-cd $HOME/.vim/colors
-wget https://raw.githubusercontent.com/connorholyday/vim-snazzy/master/colors/snazzy.vim
-cd $HOME
-vim +PluginInstall +qall #Install vim plugnins
-/usr/bin/python3 $HOME/.vim/bundle/youcompleteme/install.sh --all
+git clone --recursive https://github.com/charitarthchugh/dotfiles $HOME/dotfiles/
+cd $HOME/dotfiles/
+./install
+cd ~
 # Add Flatpak repositories
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
@@ -62,10 +58,6 @@ brew bundle --file ~/fre.sh/Brewfile --no-lock
 # programs to install via npm
 npm i -g carbon-now-cli
 # Install fonts
-git clone --depth 1 https://github.com/google/fonts.git $HOME/.fonts/Google
-git clone --depth 1 https://github.com/JetBrains/JetBrainsMono $HOME/.fonts/Jetbrains
-git clone --depth 1 https://github.com/ryanoasis/nerd-fonts $HOME/.fonts/NerdFonts
+git clone --depth 1 https://github.com/google/fonts.git $HOME/.local/share/fonts/Google
+git clone --depth 1 https://github.com/ryanoasis/nerd-fonts $HOME/.local/share/fonts/NerdFonts
 fc-cache -r -v
-# Quick Git Config
-git config --global init.defaultBranch main
-git config --global credential.helper store

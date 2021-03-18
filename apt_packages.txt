@@ -67,7 +67,9 @@ lollypop
 chromium
 firefox
 cheese
+google-chrome-stable
 brave-browser
+keepassxc
 
 fonts-lato
 fonts-materialdesignicons-webfont
