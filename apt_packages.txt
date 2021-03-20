@@ -26,6 +26,7 @@ samba
 hub
 gh
 gedit
+bat
 golang
 python2
 python3
