@@ -47,9 +47,9 @@ sudo ./WhiteSur-gtk-theme/install.sh -g -c dark -i ubuntu
 ./WhiteSur-icon-theme/install.sh 
 ./WhiteSur-cursors/install.sh
 gsettings set org.gnome.desktop.interface icon-theme "WhiteSur-dark"
-gsettings set org.gnome.desktop.interface gtk-theme "WhiteSur-dark"
+# gsettings set org.gnome.desktop.interface gtk-theme "WhiteSur-dark" # do not use theme by default because it will render system unusible if requirements are not satisfied
 gsettings set org.gnome.desktop.interface cursor-theme "WhiteSur-dark"
-sudo flatpak override --filesystem=/usr/share/themes/WhiteSur-dark/
+# sudo flatpak override --filesystem=/usr/share/themes/WhiteSur-dark/
 cd $HOME
 # Setup dotfiles
 curl -sfL git.io/antibody | sudo sh -s - -b /usr/local/bin
