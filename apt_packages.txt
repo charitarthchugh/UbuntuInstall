@@ -20,12 +20,7 @@ needrestart
 gnome-tweak-tool
 openssh-server
 openssh-client
-dconf-editor
 appimagelauncher
-gnome-themes-standard 
-gtk2-engines-murrine
-libglib2.0-dev
-libxml2-utils
 samba
 
 hub
@@ -76,3 +71,13 @@ fonts-powerline
 font-manager
 msttcorefonts
 fonts-wine
+
+gtk2-engines-murrine
+gtk2-engines-pixbuf
+sassc
+optipng
+inkscape
+libglib2-dev-bin
+libxml2-utils
+dconf-editor
+gnome-themes-standard
