@@ -12,12 +12,7 @@ curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt
 
 echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-source /etc/os-release
-if [ ! $ID = 'pop' ];then #make sure that it is not pop-os
-    sudo add-apt-repository ppa:mmstick76/alacritty
-else
-    echo "System76 Packages Alacritty, not adding ppa"
-fi  
+source /etc/os-release 
 # Wine
 # Enable 32 bit architecture
 sudo dpkg --add-architecture i386
@@ -36,6 +31,7 @@ sudo snap install --classic intellij-idea-ultimate
 sudo snap install --classic pycharm-professional
 sudo snap install --classic code
 sudo snap install --classic codium
+sudo snap install starship
 
 # Set GTK Themes
 mkdir -p $HOME/Dev/GTK
