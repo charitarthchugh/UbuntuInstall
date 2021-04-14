@@ -1,7 +1,6 @@
 git
 file
 build-essential
-alacritty
 unzip
 llvm
 zsh
