@@ -24,7 +24,14 @@ sudo add-apt-repository -y ppa:git-core/ppa
 sudo add-apt-repository -y ppa:phoerious/keepassxc
 sudo apt update -y
 # Programs to install via apt
-xargs --arg-file="~/fre.sh/apt_packages.txt" sudo apt install -y
+while read package; do 
+    sudo apt install -y -qq "$package"
+    if [ $? -eq 0]; then
+        echo "$package is installed from apt!"
+    else
+        echo "$package" >> apt_failed.text
+    fi
+done < apt_packages.txt 
 
 # Snap section- cannot use loop for snaps that need --classic
 sudo snap install --classic intellij-idea-ultimate
@@ -66,3 +73,4 @@ npm i -g carbon-now-cli
 git clone --depth 1 https://github.com/google/fonts.git $HOME/.local/share/fonts/Google
 git clone --depth 1 https://github.com/ryanoasis/nerd-fonts $HOME/.local/share/fonts/NerdFonts
 fc-cache -r -v
+cat apt_failed.txt
