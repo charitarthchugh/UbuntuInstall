@@ -26,7 +26,7 @@ sudo apt update -y
 # Programs to install via apt
 while read package; do 
     sudo apt install -y -qq "$package"
-    if [ $? -eq 0]; then
+    if [[ $? -eq 0 ]]; then
         echo "$package is installed from apt!"
     else
         echo "$package" >> apt_failed.text
